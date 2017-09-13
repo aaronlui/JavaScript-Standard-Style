@@ -7,8 +7,8 @@
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
   ```js
-  function hello (name) {
-    console.log('hi', name)
+  function hello(name) {
+    console.log('hi', name);
   }
   ```
 
@@ -17,8 +17,8 @@
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
   ```js
-  console.log('hello there')
-  $("<div class='box'>")
+  console.log('hello there');
+  $("<div class='box'>");
   ```
 
 * **不要定义未使用的变量**。
@@ -26,8 +26,8 @@
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
   ```js
-  function myFunction () {
-    var result = something()   // ✗ avoid
+  function myFunction() {
+    var result = something();   // ✗ avoid
   }
   ```
 
@@ -73,14 +73,14 @@
 
   ```js
   // ✓ ok
-  var x = 2
-  var message = 'hello, ' + name + '!'
+  var x = 2;
+  var message = 'hello, ' + name + '!';
   ```
 
   ```js
   // ✗ avoid
-  var x=2
-  var message = 'hello, '+name+'!'
+  var x=2;
+  var message = 'hello, '+name+'!';
   ```
 
 * **逗号后面加空格**。
@@ -89,14 +89,14 @@
 
   ```js
   // ✓ ok
-  var list = [1, 2, 3, 4]
-  function greet (name, options) { ... }
+  var list = [1, 2, 3, 4];
+  function greet(name, options) { ... }
   ```
 
   ```js
   // ✗ avoid
-  var list = [1,2,3,4]
-  function greet (name,options) { ... }
+  var list = [1,2,3,4];
+  function greet(name,options) { ... }
   ```
 
 * **else 关键字要与花括号**保持在同一行。
@@ -128,20 +128,20 @@
 
   ```js
   // ✓ ok
-  if (options.quiet !== true) console.log('done')
+  if (options.quiet !== true) console.log('done');
   ```
 
   ```js
   // ✓ ok
   if (options.quiet !== true) {
-    console.log('done')
+    console.log('done');
   }
   ```
 
   ```js
   // ✗ avoid
   if (options.quiet !== true)
-    console.log('done')
+    console.log('done');
   ```
 
 * **不要丢掉**异常处理中`err`参数。
@@ -149,16 +149,16 @@
   eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
   // ✓ ok
-  run(function (err) {
-    if (err) throw err
-    window.alert('done')
+  run(function(err) {
+    if (err) throw err;
+    window.alert('done');
   })
   ```
 
   ```js
   // ✗ avoid
-  run(function (err) {
-    window.alert('done')
+  run(function(err) {
+    window.alert('done');
   })
   ```
 
@@ -168,7 +168,7 @@
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
 
   ```js
-  window.alert('hi')   // ✓ ok
+  window.alert('hi');   // ✓ ok
   ```
 
 * **不允许有连续多行空行**。
@@ -177,16 +177,16 @@
 
   ```js
   // ✓ ok
-  var value = 'hello world'
-  console.log(value)
+  var value = 'hello world';
+  console.log(value);
   ```
 
   ```js
   // ✗ avoid
-  var value = 'hello world'
+  var value = 'hello world';
 
 
-  console.log(value)
+  console.log(value);
   ```
 
 * **对于三元运算符** `?` 和 `:` 与他们所负责的代码处于同一行
@@ -195,17 +195,17 @@
 
   ```js
   // ✓ ok
-  var location = env.development ? 'localhost' : 'www.api.com'
+  var location = env.development ? 'localhost' : 'www.api.com';
 
   // ✓ ok
   var location = env.development
     ? 'localhost'
-    : 'www.api.com'
+    : 'www.api.com';
 
   // ✗ avoid
   var location = env.development ?
     'localhost' :
-    'www.api.com'
+    'www.api.com';
   ```
 
 * **每个 var 关键字**单独声明一个变量。
@@ -214,15 +214,15 @@
 
   ```js
   // ✓ ok
-  var silent = true
-  var verbose = true
+  var silent = true;
+  var verbose = true;
 
   // ✗ avoid
-  var silent = true, verbose = true
+  var silent = true, verbose = true;
 
   // ✗ avoid
   var silent = true,
-      verbose = true
+      verbose = true;
   ```
 
 * **条件语句中赋值语句**使用括号包起来。这样使得代码更加清晰可读，而不会认为是将条件判断语句的全等号（`===`）错写成了等号（`=`）。
@@ -246,8 +246,8 @@
   eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
 
   ```js
-    function foo () {return true}    // ✗ avoid
-    function foo () { return true }  // ✓ ok
+    function foo() {return true;}    // ✗ avoid
+    function foo() { return true; }  // ✓ ok
   ```
 
 * **对于变量和函数名统一使用驼峰命名法**。
@@ -255,11 +255,11 @@
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
 
   ```js
-    function my_function () { }    // ✗ avoid
-    function myFunction () { }     // ✓ ok
+    function my_function() { }    // ✗ avoid
+    function myFunction() { }     // ✓ ok
 
-    var my_var = 'hello'           // ✗ avoid
-    var myVar = 'hello'            // ✓ ok
+    var my_var = 'hello';           // ✗ avoid
+    var myVar = 'hello';            // ✓ ok
   ```
 
 * **不允许有多余的行末逗号**。
@@ -294,10 +294,10 @@
 
   ```js
     console.
-      log('hello')  // ✗ avoid
+      log('hello');  // ✗ avoid
 
     console
-      .log('hello') // ✓ ok
+      .log('hello'); // ✓ ok
   ```
 
 * **文件末尾留一空行**。
@@ -309,8 +309,8 @@
   eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
 
   ```js
-  console.log ('hello') // ✗ avoid
-  console.log('hello')  // ✓ ok
+  console.log ('hello'); // ✗ avoid
+  console.log('hello');  // ✓ ok
   ```
 
 * **键值对当中冒号与值之间要留空白**。
@@ -318,10 +318,10 @@
   eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
 
   ```js
-  var obj = { 'key' : 'value' }    // ✗ avoid
-  var obj = { 'key' :'value' }     // ✗ avoid
-  var obj = { 'key':'value' }      // ✗ avoid
-  var obj = { 'key': 'value' }     // ✓ ok
+  var obj = { 'key' : 'value' };    // ✗ avoid
+  var obj = { 'key' :'value' };     // ✗ avoid
+  var obj = { 'key':'value' };      // ✗ avoid
+  var obj = { 'key': 'value' };     // ✓ ok
   ```
 
 * **构造函数要以大写字母开头**。
@@ -329,11 +329,11 @@
   eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
 
   ```js
-  function animal () {}
-  var dog = new animal()    // ✗ avoid
+  function animal() {}
+  var dog = new animal();    // ✗ avoid
 
-  function Animal () {}
-  var dog = new Animal()    // ✓ ok
+  function Animal() {}
+  var dog = new Animal();    // ✓ ok
   ```
 
 * **无参的构造函数调用时要带上括号**。
@@ -341,9 +341,9 @@
   eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
 
   ```js
-  function Animal () {}
-  var dog = new Animal    // ✗ avoid
-  var dog = new Animal()  // ✓ ok
+  function Animal() {}
+  var dog = new Animal;    // ✗ avoid
+  var dog = new Animal();  // ✓ ok
   ```
 
 * **对象中定义了存值器，一定要对应的定义取值器**。
@@ -352,17 +352,17 @@
 
   ```js
   var person = {
-    set name (value) {    // ✗ avoid
-      this.name = value
+    set name(value) {    // ✗ avoid
+      this.name = value;
     }
   }
 
   var person = {
-    set name (value) {
-      this.name = value
+    set name(value) {
+      this.name = value;
     },
-    get name () {         // ✓ ok
-      return this.name
+    get name() {         // ✓ ok
+      return this.name;
     }
   }
   ```
@@ -373,14 +373,14 @@
 
   ```js
   class Dog {
-    constructor () {
-      super()   // ✗ avoid
+    constructor() {
+      super();   // ✗ avoid
     }
   }
 
   class Dog extends Mammal {
-    constructor () {
-      super()   // ✓ ok
+    constructor() {
+      super();   // ✓ ok
     }
   }
   ```
@@ -390,8 +390,8 @@
   eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
 
   ```js
-  var nums = new Array(1, 2, 3)   // ✗ avoid
-  var nums = [1, 2, 3]            // ✓ ok
+  var nums = new Array(1, 2, 3);   // ✗ avoid
+  var nums = [1, 2, 3];            // ✓ ok
   ```
 
 * **避免使用 `arguments.callee` 和 `arguments.caller`**。
@@ -399,16 +399,16 @@
   eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
 
   ```js
-  function foo (n) {
-    if (n <= 0) return
+  function foo(n) {
+    if (n <= 0) return;
 
-    arguments.callee(n - 1)   // ✗ avoid
+    arguments.callee(n - 1);   // ✗ avoid
   }
 
-  function foo (n) {
-    if (n <= 0) return
+  function foo(n) {
+    if (n <= 0) return;
 
-    foo(n - 1)
+    foo(n - 1);
   }
   ```
 
@@ -418,7 +418,7 @@
 
   ```js
   class Dog {}
-  Dog = 'Fido'    // ✗ avoid
+  Dog = 'Fido';    // ✗ avoid
   ```
 
 * **避免修改使用 `const` 声明的变量**。
@@ -426,8 +426,8 @@
   eslint: [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign)
 
   ```js
-  const score = 100
-  score = 125       // ✗ avoid
+  const score = 100;
+  score = 125;       // ✗ avoid
   ```
 
 * **避免使用常量作为条件表达式的条件（循环语句除外）**。
@@ -453,8 +453,8 @@
   eslint: [`no-control-regex`](http://eslint.org/docs/rules/no-control-regex)
 
   ```js
-  var pattern = /\x1f/    // ✗ avoid
-  var pattern = /\x20/    // ✓ ok
+  var pattern = /\x1f/;    // ✗ avoid
+  var pattern = /\x20/;    // ✓ ok
   ```
 
 * **不要使用 `debugger`**。
@@ -462,9 +462,9 @@
   eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
 
   ```js
-  function sum (a, b) {
-    debugger      // ✗ avoid
-    return a + b
+  function sum(a, b) {
+    debugger;      // ✗ avoid
+    return a + b;
   }
   ```
 
@@ -473,8 +473,8 @@
   eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
 
   ```js
-  var name
-  delete name     // ✗ avoid
+  var name;
+  delete name;     // ✗ avoid
   ```
 
 * **不要定义冗余的函数参数**。
@@ -482,11 +482,11 @@
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
   ```js
-  function sum (a, b, a) {  // ✗ avoid
+  function sum(a, b, a) {  // ✗ avoid
     // ...
   }
 
-  function sum (a, b, c) {  // ✓ ok
+  function sum(a, b, c) {  // ✓ ok
     // ...
   }
   ```
@@ -497,8 +497,8 @@
 
   ```js
   class Dog {
-    bark () {}
-    bark () {}    // ✗ avoid
+    bark() {}
+    bark() {}    // ✗ avoid
   }
   ```
 
@@ -510,7 +510,7 @@
   var user = {
     name: 'Jane Doe',
     name: 'John Doe'    // ✗ avoid
-  }
+  };
   ```
 
 * **`switch` 语句中不要定义重复的 `case` 分支**。
@@ -530,10 +530,10 @@
   eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
 
   ```js
-  import { myFunc1 } from 'module'
-  import { myFunc2 } from 'module'          // ✗ avoid
+  import { myFunc1 } from 'module';
+  import { myFunc2 } from 'module';          // ✗ avoid
 
-  import { myFunc1, myFunc2 } from 'module' // ✓ ok
+  import { myFunc1, myFunc2 } from 'module'; // ✓ ok
   ```
 
 * **正则中不要使用空字符**。
@@ -541,8 +541,8 @@
   eslint: [`no-empty-character-class`](http://eslint.org/docs/rules/no-empty-character-class)
 
   ```js
-  const myRegex = /^abc[]/      // ✗ avoid
-  const myRegex = /^abc[a-z]/   // ✓ ok
+  const myRegex = /^abc[]/;      // ✗ avoid
+  const myRegex = /^abc[a-z]/;   // ✓ ok
   ```
 
 * **不要解构空值**。
@@ -550,8 +550,8 @@
   eslint: [`no-empty-pattern`](http://eslint.org/docs/rules/no-empty-pattern)
 
   ```js
-  const { a: {} } = foo         // ✗ avoid
-  const { a: { b } } = foo      // ✓ ok
+  const { a: {} } = foo;         // ✗ avoid
+  const { a: { b } } = foo;      // ✓ ok
   ```
 
 * **不要使用 `eval()`**。
@@ -559,8 +559,8 @@
   eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
 
   ```js
-  eval( "var result = user." + propName ) // ✗ avoid
-  var result = user[propName]             // ✓ ok
+  eval( "var result = user." + propName ); // ✗ avoid
+  var result = user[propName];             // ✓ ok
   ```
 
 * **`catch` 中不要对错误重新赋值**。
@@ -571,13 +571,13 @@
   try {
     // ...
   } catch (e) {
-    e = 'new value'             // ✗ avoid
+    e = 'new value';             // ✗ avoid
   }
 
   try {
     // ...
   } catch (e) {
-    const newVal = 'new value'  // ✓ ok
+    const newVal = 'new value';  // ✓ ok
   }
   ```
 
@@ -586,7 +586,7 @@
   eslint: [`no-extend-native`](http://eslint.org/docs/rules/no-extend-native)
 
   ```js
-  Object.prototype.age = 21     // ✗ avoid
+  Object.prototype.age = 21;     // ✗ avoid
   ```
 
 * **避免多余的函数上下文绑定**。
@@ -594,13 +594,13 @@
   eslint: [`no-extra-bind`](http://eslint.org/docs/rules/no-extra-bind)
 
   ```js
-  const name = function () {
-    getName()
-  }.bind(user)    // ✗ avoid
+  const name = function() {
+    getName();
+  }.bind(user);    // ✗ avoid
 
-  const name = function () {
-    this.getName()
-  }.bind(user)    // ✓ ok
+  const name = function() {
+    this.getName();
+  }.bind(user);    // ✓ ok
   ```
 
 * **避免不必要的布尔转换**。
@@ -608,12 +608,12 @@
   eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
 
   ```js
-  const result = true
+  const result = true;
   if (!!result) {   // ✗ avoid
     // ...
   }
 
-  const result = true
+  const result = true;
   if (result) {     // ✓ ok
     // ...
   }
@@ -624,8 +624,8 @@
   eslint: [`no-extra-parens`](http://eslint.org/docs/rules/no-extra-parens)
 
   ```js
-  const myFunc = (function () { })   // ✗ avoid
-  const myFunc = function () { }     // ✓ ok
+  const myFunc = (function() { });   // ✗ avoid
+  const myFunc = function() { };     // ✓ ok
   ```
 
 * **`switch` 一定要使用 `break` 来将条件分支正常中断**。
@@ -635,25 +635,25 @@
   ```js
   switch (filter) {
     case 1:
-      doSomething()    // ✗ avoid
+      doSomething();    // ✗ avoid
     case 2:
-      doSomethingElse()
+      doSomethingElse();
   }
 
   switch (filter) {
     case 1:
-      doSomething()
+      doSomething();
       break           // ✓ ok
     case 2:
-      doSomethingElse()
+      doSomethingElse();
   }
 
   switch (filter) {
     case 1:
-      doSomething()
+      doSomething();
       // fallthrough  // ✓ ok
     case 2:
-      doSomethingElse()
+      doSomethingElse();
   }
   ```
 
@@ -662,8 +662,8 @@
   eslint: [`no-floating-decimal`](http://eslint.org/docs/rules/no-floating-decimal)
 
   ```js
-  const discount = .5      // ✗ avoid
-  const discount = 0.5     // ✓ ok
+  const discount = .5;      // ✗ avoid
+  const discount = 0.5;    // ✓ ok
   ```
 
 * **避免对声明过的函数重新赋值**。
@@ -671,8 +671,8 @@
   eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
 
   ```js
-  function myFunc () { }
-  myFunc = myOtherFunc    // ✗ avoid
+  function myFunc() { }
+  myFunc = myOtherFunc;    // ✗ avoid
   ```
 
 * **不要对全局只读对象重新赋值**。
@@ -680,7 +680,7 @@
   eslint: [`no-global-assign`](http://eslint.org/docs/rules/no-global-assign)
 
   ```js
-  window = {}     // ✗ avoid
+  window = {};     // ✗ avoid
   ```
 
 * **注意隐式的 `eval()`**。
@@ -688,8 +688,8 @@
   eslint: [`no-implied-eval`](http://eslint.org/docs/rules/no-implied-eval)
 
   ```js
-  setTimeout("alert('Hello world')")                   // ✗ avoid
-  setTimeout(function () { alert('Hello world') })     // ✓ ok
+  setTimeout("alert('Hello world')");                   // ✗ avoid
+  setTimeout(function() { alert('Hello world') });     // ✓ ok
   ```
 
 * **嵌套的代码块中禁止再定义函数**。
@@ -698,7 +698,7 @@
 
   ```js
   if (authenticated) {
-    function setAuthUser () {}    // ✗ avoid
+    function setAuthUser() {}    // ✗ avoid
   }
   ```
 
@@ -716,7 +716,7 @@
   eslint: [`no-irregular-whitespace`](http://eslint.org/docs/rules/no-irregular-whitespace)
 
   ```js
-  function myFunc () /*<NBSP>*/{}   // ✗ avoid
+  function myFunc() /*<NBSP>*/{}   // ✗ avoid
   ```
 
 * **禁止使用 `__iterator__`**。
@@ -724,7 +724,7 @@
   eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator)
 
   ```js
-  Foo.prototype.__iterator__ = function () {}   // ✗ avoid
+  Foo.prototype.__iterator__ = function() {};   // ✗ avoid
   ```
 
 * **外部变量不要与对象属性重名**。
@@ -732,8 +732,8 @@
   eslint: [`no-label-var`](http://eslint.org/docs/rules/no-label-var)
 
   ```js
-  var score = 100
-  function game () {
+  var score = 100;
+  function game() {
     score: 50         // ✗ avoid
   }
   ```
@@ -745,7 +745,7 @@
   ```js
   label:
     while (true) {
-      break label     // ✗ avoid
+      break label;     // ✗ avoid
     }
   ```
 
@@ -754,14 +754,14 @@
   eslint: [`no-lone-blocks`](http://eslint.org/docs/rules/no-lone-blocks)
 
   ```js
-  function myFunc () {
+  function myFunc() {
     {                   // ✗ avoid
-      myOtherFunc()
+      myOtherFunc();
     }
   }
 
-  function myFunc () {
-    myOtherFunc()       // ✓ ok
+  function myFunc() {
+    myOtherFunc();       // ✓ ok
   }
   ```
 
@@ -774,8 +774,8 @@
   eslint: [`no-multi-spaces`](http://eslint.org/docs/rules/no-multi-spaces)
 
   ```js
-  const id =    1234    // ✗ avoid
-  const id = 1234       // ✓ ok
+  const id =    1234;    // ✗ avoid
+  const id = 1234;       // ✓ ok
   ```
 
 * **不要使用多行字符串**。
@@ -784,7 +784,7 @@
 
   ```js
   const message = 'Hello \
-                   world'     // ✗ avoid
+                   world';     // ✗ avoid
   ```
 
 * **`new` 创建对象实例后需要赋值给变量**。
@@ -792,8 +792,8 @@
   eslint: [`no-new`](http://eslint.org/docs/rules/no-new)
 
   ```js
-  new Character()                     // ✗ avoid
-  const character = new Character()   // ✓ ok
+  new Character();                     // ✗ avoid
+  const character = new Character();   // ✓ ok
   ```
 
 * **禁止使用 `Function` 构造器**。
@@ -801,7 +801,7 @@
   eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
 
   ```js
-  var sum = new Function('a', 'b', 'return a + b')    // ✗ avoid
+  var sum = new Function('a', 'b', 'return a + b');    // ✗ avoid
   ```
 
 * **禁止使用 `Object` 构造器**。
@@ -809,7 +809,7 @@
   eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object)
 
   ```js
-  let config = new Object()   // ✗ avoid
+  let config = new Object();   // ✗ avoid
   ```
 
 * **禁止使用 `new require`**。
@@ -817,7 +817,7 @@
   eslint: [`no-new-require`](http://eslint.org/docs/rules/no-new-require)
 
   ```js
-  const myModule = new require('my-module')    // ✗ avoid
+  const myModule = new require('my-module');    // ✗ avoid
   ```
 
 * **禁止使用 `Symbol` 构造器**。
@@ -825,7 +825,7 @@
   eslint: [`no-new-symbol`](http://eslint.org/docs/rules/no-new-symbol)
 
   ```js
-  const foo = new Symbol('foo')   // ✗ avoid
+  const foo = new Symbol('foo');   // ✗ avoid
   ```
 
 * **禁止使用原始包装器**。
@@ -833,7 +833,7 @@
   eslint: [`no-new-wrappers`](http://eslint.org/docs/rules/no-new-wrappers)
 
   ```js
-  const message = new String('hello')   // ✗ avoid
+  const message = new String('hello');   // ✗ avoid
   ```
 
 * **不要将全局对象的属性作为函数调用**。
@@ -841,7 +841,7 @@
   eslint: [`no-obj-calls`](http://eslint.org/docs/rules/no-obj-calls)
 
   ```js
-  const math = Math()   // ✗ avoid
+  const math = Math();   // ✗ avoid
   ```
 
 * **不要使用八进制字面量**。
@@ -849,8 +849,8 @@
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
   ```js
-  const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const num = 042;     // ✗ avoid
+  const num = '042';   // ✓ ok
   ```
 
 * **字符串字面量中也不要使用八进制转义字符**。
@@ -858,7 +858,7 @@
   eslint: [`no-octal-escape`](http://eslint.org/docs/rules/no-octal-escape)
 
   ```js
-  const copyright = 'Copyright \251'  // ✗ avoid
+  const copyright = 'Copyright \251';  // ✗ avoid
   ```
 
 * **使用 `__dirname` 和 `__filename` 时尽量避免使用字符串拼接**。
@@ -866,8 +866,8 @@
   eslint: [`no-path-concat`](http://eslint.org/docs/rules/no-path-concat)
 
   ```js
-  const pathToFile = __dirname + '/app.js'            // ✗ avoid
-  const pathToFile = path.join(__dirname, 'app.js')   // ✓ ok
+  const pathToFile = __dirname + '/app.js';            // ✗ avoid
+  const pathToFile = path.join(__dirname, 'app.js');   // ✓ ok
   ```
 
 * 使用 `getPrototypeOf` 来替代 **`__proto__`**。
@@ -875,8 +875,8 @@
   eslint: [`no-proto`](http://eslint.org/docs/rules/no-proto)
 
   ```js
-  const foo = obj.__proto__               // ✗ avoid
-  const foo = Object.getPrototypeOf(obj)  // ✓ ok
+  const foo = obj.__proto__;               // ✗ avoid
+  const foo = Object.getPrototypeOf(obj);  // ✓ ok
   ```
 
 * **不要重复声明变量**。
@@ -884,11 +884,11 @@
   eslint: [`no-redeclare`](http://eslint.org/docs/rules/no-redeclare)
 
   ```js
-  let name = 'John'
-  let name = 'Jane'     // ✗ avoid
+  let name = 'John';
+  let name = 'Jane';     // ✗ avoid
 
-  let name = 'John'
-  name = 'Jane'         // ✓ ok
+  let name = 'John';
+  name = 'Jane';         // ✓ ok
   ```
 
 * **正则中避免使用多个空格**。
@@ -896,10 +896,10 @@
   eslint: [`no-regex-spaces`](http://eslint.org/docs/rules/no-regex-spaces)
 
   ```js
-  const regexp = /test   value/   // ✗ avoid
+  const regexp = /test   value/;   // ✗ avoid
 
-  const regexp = /test {3}value/  // ✓ ok
-  const regexp = /test value/     // ✓ ok
+  const regexp = /test {3}value/;  // ✓ ok
+  const regexp = /test value/;     // ✓ ok
   ```
 
 * **return 语句中的赋值必需有括号包裹**。
@@ -907,12 +907,12 @@
   eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
 
   ```js
-  function sum (a, b) {
-    return result = a + b     // ✗ avoid
+  function sum(a, b) {
+    return result = a + b;     // ✗ avoid
   }
 
-  function sum (a, b) {
-    return (result = a + b)   // ✓ ok
+  function sum(a, b) {
+    return (result = a + b);   // ✓ ok
   }
   ```
 
@@ -921,7 +921,7 @@
   eslint: [`no-self-assign`](http://eslint.org/docs/rules/no-self-assign)
 
   ```js
-  name = name   // ✗ avoid
+  name = name;   // ✗ avoid
   ```
 
 * **避免将变量与自己进行比较操作**。
@@ -945,7 +945,7 @@
   eslint: [`no-shadow-restricted-names`](http://eslint.org/docs/rules/no-shadow-restricted-names)
 
   ```js
-  let undefined = 'value'     // ✗ avoid
+  let undefined = 'value';     // ✗ avoid
   ```
 
 * **禁止使用稀疏数组（Sparse arrays）**。
@@ -953,7 +953,7 @@
   eslint: [`no-sparse-arrays`](http://eslint.org/docs/rules/no-sparse-arrays)
 
   ```js
-  let fruits = ['apple',, 'orange']       // ✗ avoid
+  let fruits = ['apple',, 'orange'];       // ✗ avoid
   ```
 
 * **不要使用制表符**。
@@ -965,8 +965,8 @@
   eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
 
   ```js
-  const message = 'Hello ${name}'   // ✗ avoid
-  const message = `Hello ${name}`   // ✓ ok
+  const message = 'Hello ${name}';   // ✗ avoid
+  const message = `Hello ${name}`;   // ✓ ok
   ```
 
 * **使用 `this` 前请确保 `super()` 已调用**。
@@ -975,9 +975,9 @@
 
   ```js
   class Dog extends Animal {
-    constructor () {
-      this.legs = 4     // ✗ avoid
-      super()
+    constructor() {
+      this.legs = 4;     // ✗ avoid
+      super();
     }
   }
   ```
@@ -987,8 +987,8 @@
   eslint: [`no-throw-literal`](http://eslint.org/docs/rules/no-throw-literal)
 
   ```js
-  throw 'error'               // ✗ avoid
-  throw new Error('error')    // ✓ ok
+  throw 'error';               // ✗ avoid
+  throw new Error('error');    // ✓ ok
   ```
 
 * **行末不留空格**。
@@ -1000,10 +1000,10 @@
   eslint: [`no-undef-init`](http://eslint.org/docs/rules/no-undef-init)
 
   ```js
-  let name = undefined    // ✗ avoid
+  let name = undefined;    // ✗ avoid
 
-  let name
-  name = 'value'          // ✓ ok
+  let name;
+  name = 'value';          // ✓ ok
   ```
 
 * **循环语句中注意更新循环变量**。
@@ -1020,8 +1020,8 @@
   eslint: [`no-unneeded-ternary`](http://eslint.org/docs/rules/no-unneeded-ternary)
 
   ```js
-  let score = val ? val : 0     // ✗ avoid
-  let score = val || 0          // ✓ ok
+  let score = val ? val : 0;     // ✗ avoid
+  let score = val || 0;          // ✓ ok
   ```
 
 * **`return`，`throw`，`continue` 和 `break` 后不要再跟代码**。
@@ -1030,8 +1030,8 @@
 
   ```js
   function doSomething () {
-    return true
-    console.log('never called')     // ✗ avoid
+    return true;
+    console.log('never called');     // ✗ avoid
   }
   ```
 
@@ -1045,7 +1045,7 @@
   } catch (e) {
     // ...
   } finally {
-    return 42     // ✗ avoid
+    return 42;     // ✗ avoid
   }
   ```
 
@@ -1062,7 +1062,7 @@
   eslint: [`no-useless-call`](http://eslint.org/docs/rules/no-useless-call)
 
   ```js
-  sum.call(null, 1, 2, 3)   // ✗ avoid
+  sum.call(null, 1, 2, 3);   // ✗ avoid
   ```
 
 * **避免使用不必要的计算值作对象属性**。
@@ -1070,8 +1070,8 @@
   eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
 
   ```js
-  const user = { ['name']: 'John Doe' }   // ✗ avoid
-  const user = { name: 'John Doe' }       // ✓ ok
+  const user = { ['name']: 'John Doe' };   // ✗ avoid
+  const user = { name: 'John Doe' };       // ✓ ok
   ```
 
 * **禁止多余的构造器**。
@@ -1080,7 +1080,7 @@
 
   ```js
   class Car {
-    constructor () {      // ✗ avoid
+    constructor() {      // ✗ avoid
     }
   }
   ```
@@ -1090,7 +1090,7 @@
   eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
 
   ```js
-  let message = 'Hell\o'  // ✗ avoid
+  let message = 'Hell\o';  // ✗ avoid
   ```
 
 * **import, export 和解构操作中，禁止赋值到同名变量**。
@@ -1098,8 +1098,8 @@
   eslint: [`no-useless-rename`](http://eslint.org/docs/rules/no-useless-rename)
 
   ```js
-  import { config as config } from './config'     // ✗ avoid
-  import { config } from './config'               // ✓ ok
+  import { config as config } from './config';     // ✗ avoid
+  import { config } from './config';               // ✓ ok
   ```
 
 * **属性前面不要加空格**。
@@ -1107,8 +1107,8 @@
   eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
 
   ```js
-  user .name      // ✗ avoid
-  user.name       // ✓ ok
+  user .name;      // ✗ avoid
+  user.name;       // ✓ ok
   ```
 
 * **禁止使用 `with`**。
@@ -1127,15 +1127,15 @@
   const user = {
     name: 'Jane Doe', age: 30,
     username: 'jdoe86'            // ✗ avoid
-  }
+  };
 
-  const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
+  const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' };    // ✓ ok
 
   const user = {
     name: 'Jane Doe',
     age: 30,
     username: 'jdoe86'
-  }                                                                 // ✓ ok
+  };                                                                 // ✓ ok
   ```
 
 * **代码块中避免多余留白**。
@@ -1145,12 +1145,12 @@
   ```js
   if (user) {
                               // ✗ avoid
-    const name = getName()
+    const name = getName();
 
   }
 
   if (user) {
-    const name = getName()    // ✓ ok
+    const name = getName();    // ✓ ok
   }
   ```
 
@@ -1159,8 +1159,8 @@
   eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
 
   ```js
-  fn(... args)    // ✗ avoid
-  fn(...args)     // ✓ ok
+  fn(... args);    // ✗ avoid
+  fn(...args);     // ✓ ok
   ```
 
 * **遇到分号时空格要后留前不留**。
@@ -1186,8 +1186,8 @@
   eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
 
   ```js
-  getName( name )     // ✗ avoid
-  getName(name)       // ✓ ok
+  getName( name );     // ✗ avoid
+  getName(name);       // ✓ ok
   ```
 
 * **一元运算符后面跟一个空格**。
@@ -1195,8 +1195,8 @@
   eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
 
   ```js
-  typeof!admin        // ✗ avoid
-  typeof !admin        // ✓ ok
+  typeof!admin;        // ✗ avoid
+  typeof !admin;        // ✓ ok
   ```
 
 * **注释首尾留空格**。
@@ -1216,8 +1216,8 @@
   eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
 
   ```js
-  const message = `Hello, ${ name }`    // ✗ avoid
-  const message = `Hello, ${name}`      // ✓ ok
+  const message = `Hello, ${ name }`;    // ✗ avoid
+  const message = `Hello, ${name}`;      // ✓ ok
   ```
 
 * **检查 `NaN` 的正确姿势是使用 `isNaN()`**。
@@ -1234,8 +1234,8 @@
   eslint: [`valid-typeof`](http://eslint.org/docs/rules/valid-typeof)
 
   ```js
-  typeof name === 'undefimed'     // ✗ avoid
-  typeof name === 'undefined'     // ✓ ok
+  typeof name === 'undefimed';     // ✗ avoid
+  typeof name === 'undefined';     // ✓ ok
   ```
 
 * **自调用匿名函数 (IIFEs) 使用括号包裹**。
@@ -1243,10 +1243,10 @@
   eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
 
   ```js
-  const getName = function () { }()     // ✗ avoid
+  const getName = function() { }();     // ✗ avoid
 
-  const getName = (function () { }())   // ✓ ok
-  const getName = (function () { })()   // ✓ ok
+  const getName = (function() { }());   // ✓ ok
+  const getName = (function() { })();   // ✓ ok
   ```
 
 * **`yield *` 中的 `*` 前后都要有空格**。
@@ -1254,8 +1254,8 @@
   eslint: [`yield-star-spacing`](http://eslint.org/docs/rules/yield-star-spacing)
 
   ```js
-  yield* increment()    // ✗ avoid
-  yield * increment()   // ✓ ok
+  yield* increment();    // ✗ avoid
+  yield * increment();   // ✓ ok
   ```
 
 * **请书写优雅的条件语句（avoid Yoda conditions）**。
@@ -1275,4 +1275,3 @@
   window.alert('hi')   // ✗ avoid
   window.alert('hi');  // ✓ ok
   ```
-  
