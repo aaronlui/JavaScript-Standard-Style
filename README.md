@@ -48,8 +48,8 @@
   function name (arg) { ... }   // ✗ avoid
   function name(arg) { ... }    // ✓ ok
 
-  run(function () { ... })      // ✗ avoid
-  run(function() { ... })       // ✓ ok
+  run(function () { ... });      // ✗ avoid
+  run(function() { ... });       // ✓ ok
   ```
 
 * **始终使用** `===` 替代 `==`。<br>
@@ -152,14 +152,14 @@
   run(function(err) {
     if (err) throw err;
     window.alert('done');
-  })
+  });
   ```
 
   ```js
   // ✗ avoid
   run(function(err) {
     window.alert('done');
-  })
+  });
   ```
 
 * **使用浏览器全局变量时加上** `window.` 前缀。<br>
@@ -269,7 +269,7 @@
   ```js
     var obj = {
       message: 'hello',   // ✗ avoid
-    }
+    };
   ```
 
 * **始终将逗号置于行末**。
@@ -280,12 +280,12 @@
     var obj = {
       foo: 'foo'
       ,bar: 'bar'   // ✗ avoid
-    }
+    };
 
     var obj = {
       foo: 'foo',
       bar: 'bar'   // ✓ ok
-    }
+    };
   ```
 
 * **点号操作符须与属性需在同一行**。
@@ -355,7 +355,7 @@
     set name(value) {    // ✗ avoid
       this.name = value;
     }
-  }
+  };
 
   var person = {
     set name(value) {
@@ -364,7 +364,7 @@
     get name() {         // ✓ ok
       return this.name;
     }
-  }
+  };
   ```
 
 * **子类的构造器中一定要调用 `super`**
@@ -689,7 +689,7 @@
 
   ```js
   setTimeout("alert('Hello world')");                   // ✗ avoid
-  setTimeout(function() { alert('Hello world') });     // ✓ ok
+  setTimeout(function() { alert('Hello world'); });     // ✓ ok
   ```
 
 * **嵌套的代码块中禁止再定义函数**。
@@ -707,8 +707,8 @@
   eslint: [`no-invalid-regexp`](http://eslint.org/docs/rules/no-invalid-regexp)
 
   ```js
-  RegExp('[a-z')    // ✗ avoid
-  RegExp('[a-z]')   // ✓ ok
+  RegExp('[a-z');    // ✗ avoid
+  RegExp('[a-z]');   // ✓ ok
   ```
 
 * **不要使用非法的空白符**。
@@ -1029,7 +1029,7 @@
   eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
 
   ```js
-  function doSomething () {
+  function doSomething() {
     return true;
     console.log('never called');     // ✗ avoid
   }
